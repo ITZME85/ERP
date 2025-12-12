@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory — Basic ERP</title>
+    <link rel="stylesheet" href="{% static 'css/inventory.css' %}">
+</head>
+<body>
+    <div class="erp-container">
+        <header class="erp-header">
+            <div class="erp-title">
+                <h1>Inventory</h1>
+                <p class="erp-sub">Manage products, stock and costs</p>
+            </div>
+            <div class="erp-actions">
+                <input class="erp-search" type="search" placeholder="Search product..." aria-label="Search products">
+                <button class="btn btn-primary">+ Add Item</button>
+            </div>
+        </header>
+
+        <main class="erp-main">
+            <div class="card">
+                <div class="table-wrap">
+                    <table class="erp-table">
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th class="text-center">Quantity</th>
+                                <th class="text-right">Cost</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Pen</td>
+                                <td class="text-center">100</td>
+                                <td class="text-right">$10.00</td>
+                            </tr>
+                            <tr>
+                                <td>Pencil</td>
+                                <td class="text-center">70</td>
+                                <td class="text-right">$5.00</td>
+                            </tr>
+                            <tr>
+                                <td>Book</td>
+                                <td class="text-center">90</td>
+                                <td class="text-right">$30.00</td>
+                            </tr>
+                            <tr>
+                                <td>Eraser</td>
+                                <td class="text-center">80</td>
+                                <td class="text-right">$5.00</td>
+                            </tr>
+                            <tr>
+                                <td>Scale</td>
+                                <td class="text-center">50</td>
+                                <td class="text-right">$20.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

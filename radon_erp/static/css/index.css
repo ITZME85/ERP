@@ -1,0 +1,53 @@
+:root{
+    --bg: #f4f7fb;
+    --card: #ffffff;
+    --muted: #6b7280;
+    --accent: #2563eb;
+    --radius: 10px;
+    --shadow: 0 8px 20px rgba(17,24,39,0.06);
+    --border: #e6eef8;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;}
+body{
+    margin:0;
+    font-family: Inter, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    background: linear-gradient(180deg,#f7fbff 0%, var(--bg) 100%);
+    color:#0f172a;
+}
+
+.erp-container{
+    max-width:1100px;
+    margin:28px auto;
+    padding:18px;
+}
+
+.erp-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    margin-bottom:18px;
+}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:48px;height:48px;border-radius:10px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+.brand-title{margin:0;font-size:16px}
+.brand-sub{font-size:12px;color:var(--muted)}
+
+.erp-nav{display:flex;gap:10px}
+.nav-item{display:inline-block;padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--muted);border:1px solid transparent}
+.nav-item:hover{background:rgba(37,99,235,0.06);color:var(--accent)}
+
+.erp-main{margin-top:4px}
+.dashboard-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.card{background:var(--card);padding:16px;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid rgba(15,23,42,0.03)}
+.card-title{font-weight:700;font-size:15px;margin-bottom:6px}
+.card-sub{color:var(--muted);font-size:13px}
+.card-link{text-decoration:none;color:inherit;display:block;transition:transform .14s ease, box-shadow .14s ease}
+.card-link:hover{transform:translateY(-6px);box-shadow:0 12px 36px rgba(16,24,40,0.08)}
+
+@media (max-width:720px){
+    .erp-container{padding:12px;margin:14px}
+    .brand-title{font-size:14px}
+}

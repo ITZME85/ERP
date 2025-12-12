@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content = 'Basic ERP dashboard'>
+    <title>Basic ERP — Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+    <div class="erp-container">
+        <header class="erp-header">
+            <div class="brand">
+                <div class="logo">B</div>
+                <div>
+                    <h1 class="brand-title">Basic ERP</h1>
+                    <div class="brand-sub">Small business management</div>
+                </div>
+            </div>
+            <!-- <nav class="erp-nav">
+                <a class="nav-item" href="/inventory">Inventory</a>
+                <a class="nav-item" href="/quotations">Quotations</a>
+            </nav> -->
+        </header>
+
+        <main class="erp-main">
+            <section class="dashboard-grid">
+                <a class="card card-link" href="/inventory">
+                    <div class="card-title">Inventory</div>
+                    <div class="card-sub">Manage stock, costs and suppliers</div>
+                </a>
+                <a class="card card-link" href="/quotations">
+                    <div class="card-title">Quotations</div>
+                    <div class="card-sub">Create and track quotes</div>
+                </a>
+                <div class="card">
+                    <div class="card-title">Reports</div>
+                    <div class="card-sub">Sales, stock movement, profitability</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Settings</div>
+                    <div class="card-sub">Company, users and preferences</div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

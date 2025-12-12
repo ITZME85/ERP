@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotation — Basic ERP</title>
+    <link rel="stylesheet" href="{% static 'css/quotations_form.css' %}">
+</head>
+<body>
+    <div class="erp-container">
+        <hegit ader class="erp-header">
+            <div class="erp-title">
+                <h1>Create Quotation</h1>
+                <p class="erp-sub">Prepare and send customer quotations</p>
+            </div>
+            <div class="erp-actions">
+                <a class="btn btn-outline" href="/quotations">Back to list</a>
+            </div>
+        </header>
+
+        <main class="erp-main">
+            <div class="card form-card">
+                <form method="post" novalidate>
+                    {% csrf_token %}
+                    <div class="form-grid">
+                        {{ form.as_p }}
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Save Quotation</button>
+                        <a href="/quotations" class="btn btn-outline">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
